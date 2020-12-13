@@ -1,2 +1,9 @@
 FROM ubuntu
-CMD ["echo", "Hello World!"]
+
+ADD helloworld.py /
+
+RUN apt-get update
+
+RUN apt-get -y install python
+
+CMD [ "python", "./helloworld.py" ]
